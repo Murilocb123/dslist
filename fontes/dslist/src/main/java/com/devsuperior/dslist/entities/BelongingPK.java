@@ -23,7 +23,6 @@ public class BelongingPK {
 	}
 
 	public BelongingPK(Game game, GameList gameList) {
-		super();
 		this.game = game;
 		this.gameList = gameList;
 	}
