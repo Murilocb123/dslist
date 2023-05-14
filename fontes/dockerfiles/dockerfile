@@ -1,0 +1,10 @@
+FROM postgres:14-alpine AS postgres
+RUN chmod 775 /var/run/postgresql
+RUN chown -R postgres /var/run/postgresql
+RUN chmod 775 "$PGDATA"
+RUN chown -R postgres "$PGDATA"
+
+
+FROM dpage/pgadmin4 AS pgadmin4
+RUN chmod 777 /var/lib/pgadmin
+RUN chmod 777 /var/lib/pgadmin/*
